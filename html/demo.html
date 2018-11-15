@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DragonHound Tracker - DEMO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100vw;
+        }
+        #userTable {
+            top: 0.5em;
+            min-height: 3.6em;
+            min-width:15em;
+            padding: 0.5em;
+            font-size: 0.9em;
+            font-family: Verdana;
+            background-color: #EEE;
+            right:0.5em;
+            position: absolute;
+            z-index: 11111;
+            border: solid blue 1px;
+        }
+        #batterybar {
+            z-index: 9001;
+            height: 1.6em;
+            width:14em;
+            font-size: 0.9em;
+            font-family: Verdana;
+            background-color: #FFC300;
+        }
+        #batterycharge {
+            z-index: 9002;
+            bottom: 2em;
+            height: 1.6em;
+            width:14em;
+            font-size: 0.9em;
+            font-family: Verdana;
+            background-color: #5DC100;
+        }
+        .leaflet-marker-icon {
+        }
+        .underlay {
+            opacity: 0.1;
+            z-index: 9090;
+        }
+        .dogtracks {
+            opacity: 0.1;
+            z-index: 9100;
+        }
+
+        .lastpaws {
+            z-index: 9110;
+            filter: hue-rotate(180deg);
+        }
+        .lastping {
+            z-index: 9900 !important;
+        }
+        .paws {
+            z-index: 9500; 
+        }
+    </style>
+    <script src="http://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.5.0/leaflet-providers.min.js"></script>
+</head>
+<body>
+    <div id="map">
+        <div id="userTable" class="dataTable">
+            <div id="funds" class="fundsRow"> Oracle Funds: FUNDS_VAR</div>
+            <div id="batterybar" class="progbar">
+                <div id="batterycharge" class="progbar" style="width:CHARGE_VAR%"><span style="white-space: nowrap; overflow: visible;"> Battery: CHARGE_VAR%</span></div>
+            </div>
+        </div>
+    </div>
+     <script>
+        var map = L.map('map').setView([SETVEIW_VAR], 15);
+        L.tileLayer.provider('Esri.WorldImagery').addTo(map);     
+        L.tileLayer.provider('CartoDB.PositronOnlyLabels').addTo(map); 
+
+
+        var skrunch = L.icon({
+            iconUrl: 'http://www.cryptocartography.io/img/senda2.png',
+            iconSize:        [40, 49],
+            iconAnchor:   [20, 24],
+            className: 'lastping'
+        });
+
+        var paw = L.icon({
+            iconUrl: 'http://www.cryptocartography.io/img/paw.png', 
+            iconSize:    [13, 13], 
+            iconAnchor:   [6, 6],
+            className: 'paws'
+        });
+
+        POINTS_VAR
+        LASTPOINT_VAR                    
+        document.getElementById('map').width = window.offsetWidth+"px";
+        document.getElementById('map').height = window.offsetHeight+"px";
+    </script>
+</body>
+</html>
