@@ -200,3 +200,12 @@ def oraclessamples_rpc(chain, oracletxid, batonutxo, num):
             str(num)]}
     oraclessamples_result = post_rpc(def_credentials(chain), oraclessamples_payload)
     return(oraclessamples_result['result'])
+
+def getlastsegidstakes_rpc(chain, depth):
+    oraclessubscribe_payload = {
+        "jsonrpc": "1.0",
+        "id": "python",
+        "method": "oraclessubscribe",
+        "params": [depth]}
+    getlastsegidstakes_result = post_rpc(def_credentials(chain), oraclessubscribe_payload)
+return(getlastsegidstakes_result['result'])
