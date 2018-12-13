@@ -24,8 +24,14 @@ The version in development allows multiple users, and is using django framework.
 ---------------------------------------------------
 
 Assets used
-- Leaflet (for mapping)
-- Komodo Platform (to fund user accounts)
-- KMD Labs (for testing oracle and other cryptoconditions implementations)
 - Particle.io (GPS Asset tracking hardware)
 - Particle cloud (middleware to get data from device to oracle)
+- Komodo Platform (to fund user accounts)
+- KMD Labs (for testing oracle and other cryptoconditions implementations)
+- Django for user authentication and front end user interface display
+- Leaflet (for mapping display in browser)
+
+To use
+- start django server
+- set cronjob for oracle creation on newly funded accounts
+- start particle.io listener daemon (writes incoming data to oracle)
