@@ -35,3 +35,4 @@ To use
 - start django server
 - set cronjob for oracle creation on newly funded accounts
 - start particle.io listener daemon (writes incoming data to oracle)
+- start NPD deamon for spoofing coords for virtual dogs.
