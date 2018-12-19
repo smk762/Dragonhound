@@ -22,10 +22,10 @@ bool gettingFix = false;
 bool sent = false;
 
 // Set geofence (use to filter out safe zones - e.g. 500m radius around the dragonhound's den.)
-float lon_min = 115.933;
-float lon_max = 115.936;
-float lat_min = -32.032;
-float lat_max = -32.028;
+float lon_min = <enter geofence lon max>;
+float lon_max = <enter geofence lon min>;
+float lat_min = <enter geofence lat max>;
+float lat_max = <enter geofence lat min>;
  
 void setup()
 {
