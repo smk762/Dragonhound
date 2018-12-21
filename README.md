@@ -20,7 +20,7 @@ Half of any KMD recieved will fund further development, and half will be applied
 
 ---------------------------------------------------
 The current version is single user only, using cherry py framework. 
-The version in development allows multiple users, and is using django framework.
+The version in development allows multiple users, and is using django framework it will be release in a separate repository.
 ---------------------------------------------------
 
 Assets used
