@@ -14,10 +14,10 @@ HOME = os.environ['HOME']
 CONFIGDIR = str(HOME+'/.Dragonhound/')
 HTMLDIR = str(HOME+'/Dragonhound/html/')
 
-lon_min = 115.933;
-lon_max = 115.936;
-lat_min = -32.032;
-lat_max = -32.029;
+lon_min = 0;
+lon_max = 0;
+lat_min = 0;
+lat_max = 0;
  
 def selectRange(low,high, msg): 
 	while True:
