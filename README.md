@@ -1,4 +1,7 @@
 # Dragonhound
+
+Note: Code pending update to include new oraclesfund RPC method.
+
 GPS tracking a wandering hound with Particle.io via Komodo cryptoconditions oracles, displayed on Leaflet
 
 
